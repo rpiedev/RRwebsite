@@ -1,9 +1,8 @@
 const express = require("express");
 const { exec } = require("child_process");
-const { nextTick } = require("process");
 const app = express();
 const magic = `screen -r Sans-SMP -p 0 -X stuff "list $(printf '\\r')"`;
-const cputemp = "sensors coretemp-isa-0000 -A -j";
+const cputemp = "sensors -A -j";
 const cpuutil = "mpstat"
 
 app.use(express.static("public"));
