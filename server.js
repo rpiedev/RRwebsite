@@ -18,23 +18,20 @@ const data = {
 }
 var playerGet = function (request, response, next) {
     exec(magic, () => {
-        console.log("pl")
         data.players = ["bruh","bruh"]
         next();
     })
 }
 var dataGet = function (request, response, next) {
     exec(cpuutil, (error, stdout, stderr) => {
-        console.log("da")
         if(error) {console.log(error);return;}
         if(stderr) {console.log(stderr);return;}
         data.data = stdout
+        next()
     })
 }
 var tempsGet = function (request, response) {
-    console.log("te1")
     exec(cputemp, (error, stdout, stderr) => {
-        console.log("te2")
         if(error) {console.log(error);return;}
         if(stderr) {console.log(stderr);return;}
         data.temp = stdout
