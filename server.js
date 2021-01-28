@@ -34,7 +34,7 @@ var tempsGet = function (request, response, next) {
         if(error) {console.log(error);return;}
         if(stderr) {console.log(stderr);return;}
         console.log(stdout)
-        data.temp = stdout
+        data.temp = stdout.parse()
         next()
     })
 }
