@@ -6,6 +6,6 @@ fetch("/data")
 .then(response => response.json())
 .then(data => {
     players.innerText = data.players;
-    temps.innerText = data.temps;
+    temps.innerText = data.temp;
     cpudata.innerText = data.data;
 })

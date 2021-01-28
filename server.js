@@ -33,9 +33,7 @@ var tempsGet = function (request, response, next) {
     exec(cputemp, (error, stdout, stderr) => {
         if(error) {console.log(error);return;}
         if(stderr) {console.log(stderr);return;}
-        const info = stdout
-        console.log(info)
-        data.temp = info
+        data.temp = stdout
         next()
     })
 }
