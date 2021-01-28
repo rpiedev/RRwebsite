@@ -4,7 +4,7 @@ const { nextTick } = require("process");
 const app = express();
 const magic = `screen -r Sans-SMP -p 0 -X stuff "list $(printf '\\r')"`;
 const cputemp = "sensors coretemp-isa-0000 -A -j";
-const cpuutil = "top -i"
+const cpuutil = "mpstat"
 
 app.use(express.static("public"));
 app.get("/", (request, response) => {
