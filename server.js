@@ -18,7 +18,7 @@ const data = {
 }
 var cb0 = function (request, response, next) {
     exec(magic, () => {
-        data.players = "bruh"
+        data.players = ["bruh","bruh"]
         next();
     })
 }
