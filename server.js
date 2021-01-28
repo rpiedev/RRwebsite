@@ -29,17 +29,20 @@ var dataGet = function (request, response, next) {
         next()
     })
 }
-var tempsGet = function (request, response) {
+var tempsGet = function (request, response, next) {
     exec(cputemp, (error, stdout, stderr) => {
         if(error) {console.log(error);return;}
         if(stderr) {console.log(stderr);return;}
         console.log(stdout,stderr,error)
         data.temp = stdout
-        response.json(data);
+        next()
     })
 }
+var final = function (request, reponse) {
+    response.json(data)
+}
 
-app.get("/data", [playerGet, dataGet, tempsGet])
+app.get("/data", [playerGet, dataGet, tempsGet, final])
 
 const listener = app.listen(80, () => {
     console.log("Your app is listening on port " + listener.address().port);
