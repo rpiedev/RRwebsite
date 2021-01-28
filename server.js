@@ -18,6 +18,6 @@ exec(magic, (error, stdout, stderr) => {
     });
 })
 
-const listener = app.listen(process.env.PORT, () => {
+const listener = app.listen(19132, () => {
     console.log("Your app is listening on port " + listener.address().port);
 });
