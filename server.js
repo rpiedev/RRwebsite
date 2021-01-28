@@ -13,16 +13,23 @@ app.get("/", (request, response) => {
 
 const data = {
     players: ["GMiningHero","Mikorod622"],
-    performance: "data",
+    data: "data",
     temp: "nada"
 }
-var cb0 = function (request, response, next) {
+var playerGet = function (request, response, next) {
     exec(magic, () => {
         data.players = ["bruh","bruh"]
         next();
     })
 }
-var cb1 = function (request, response) {
+var dataGet = function (request, response, next) {
+    exec(cpuutil, (error, stdout, stderr) => {
+        if(error) {console.log(error);return;}
+        if(stderr) {console.log(stderr);return;}
+        data.data = stdout
+    })
+}
+var tempsGet = function (request, response) {
     exec(cputemp, (error, stdout, stderr) => {
         if(error) {console.log(error);return;}
         if(stderr) {console.log(stderr);return;}
@@ -31,7 +38,7 @@ var cb1 = function (request, response) {
     })
 }
 
-app.get("/data", [cb0, cb1])
+app.get("/data", [playerGet, dataGet, tempsGet])
 
 const listener = app.listen(80, () => {
     console.log("Your app is listening on port " + listener.address().port);
