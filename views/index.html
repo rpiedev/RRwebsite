@@ -1,11 +1,99 @@
-<HTML>
-    <head>
-        <title>Renegades</title>
-        <script src="/script.js" defer></script>
-    </head>
-    <body id="main">
-        <div id="temps"></div>
-        <div id="players"></div>
-        <div id="data"></div>
-    </body>
-</HTML>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SANS-SMP</title>
+    <style>
+      .content {
+        display:flex;
+        flex-direction:row;
+        justify-content:space-around;
+      }
+      .content > #left-content {
+        width: 78%;
+      }
+      .content > #right-content {
+        margin-top:60px;
+        background-color:green;
+        width: 20%;
+        border-radius:15px;
+      }
+      .left-container {
+        display: flex;
+        align-items: left;
+        height: auto;
+        margin: 20px;
+        border-radius:25px;
+        background-color: #1faadb;
+        overflow-x:auto;
+      }
+      .left-container > div {
+        margin: 15px;
+        border-radius: 3px;
+        background-color: #8ebf42;
+      }
+      .right-container {
+        display: flex;
+        align-items: left;
+        height: auto;
+        margin: 20px;
+      }
+      .right-container > div {
+        margin: 5px;
+        height:500px;
+        border-radius: 3px;
+        background-color: #8ebf42;
+      }
+      #title {
+        overflow-x: hidden;
+        background-color:transparent;
+      }
+      #players {
+        
+      }
+      #players > div {
+        min-width: 600px;
+        height: 120px;
+      }
+      #cores > div {
+        min-width: 120px;
+        height: 200px;
+      }
+      #info {
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div id="left-content">
+        <div class="left-container" id="title">
+          <img src="https://cdn.glitch.com/6e1e62bb-238d-4643-af64-40ab06cb6651%2FNew%20Project.png?v=1615148131820">
+        </div>
+        <div class="left-container" id="players">
+          <div>player</div>
+          <div>player</div>
+          <div>player</div>
+          <div>player</div>
+          <div>player</div>
+          <div>player</div>
+          <div>player</div>
+          <div>player</div>
+          <div>player</div>
+        </div>
+        <div class="left-container" id="cores">
+          <div>core</div>
+        </div>
+        <div class="left-container" id="info">
+          <div>
+            We are current playing Java Modded
+          </div>
+        </div>
+      </div>
+      <div id="right-content">
+        <div class="right-container" id="stuff">
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
