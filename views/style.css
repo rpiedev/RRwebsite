@@ -1,58 +1,60 @@
+body {
+  background-image:url("background.jpg");
+  
+}
 .content {
-    display:flex;
-    flex-direction:row;
-    justify-content:space-around;
-  }
-  .content > #left-content {
-    width: 78%;
-  }
-  .content > #right-content {
-    margin-top:60px;
-    background-color:green;
-    width: 20%;
-    border-radius:15px;
-  }
-  .left-container {
-    display: flex;
-    align-items: left;
-    height: auto;
-    margin: 20px;
-    border-radius:25px;
-    background-color: #1faadb;
-    overflow-x:auto;
-  }
-  .left-container > div {
-    margin: 15px;
-    border-radius: 3px;
-    background-color: #8ebf42;
-  }
-  .right-container {
-    display: flex;
-    align-items: left;
-    height: auto;
-    margin: 20px;
-  }
-  .right-container > div {
-    margin: 5px;
-    height:500px;
-    border-radius: 3px;
-    background-color: #8ebf42;
-  }
-  #title {
-    overflow-x: hidden;
-    background-color:transparent;
-  }
-  #players {
-    
-  }
-  #players > div {
-    min-width: 600px;
-    height: 120px;
-  }
-  #cores > div {
-    min-width: 120px;
-    height: 200px;
-  }
-  #info {
-    
-  }
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+}
+.content > #left-content {
+  width: 78%;
+}
+.content > #right-content {
+  margin-top:60px;
+  background-color:#2c2e2e;
+  width: 20%;
+  border-radius:15px;
+}
+.left-container {
+  display: flex;
+  align-items: left;
+  height: auto;
+  margin: 20px;
+  border-radius:25px;
+  background-color: #39adc4;
+  overflow-x:auto;
+}
+.left-container > div {
+  margin: 15px;
+  border-radius: 3px;
+}
+.left-container > img {
+  margin: 15px;
+  margin-right:0;
+}
+.right-container {
+  display: flex;
+  align-items: left;
+  height: auto;
+  margin: 20px;
+}
+.right-container > div {
+  margin: 5px;
+  height:500px;
+  border-radius: 3px;
+  color:white;
+}
+#title {
+  overflow-x: hidden;
+  background-color:transparent;
+}
+#players > div {
+  min-width: 400px;
+  height:100px;
+  font: bold 30px/3 system-ui;
+}
+#cores > div {
+  min-width: 120px;
+  height: 200px;
+}
